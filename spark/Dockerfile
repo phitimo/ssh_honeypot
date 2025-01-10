@@ -5,7 +5,7 @@ USER root
 ENV sql_mode="ANSI_QUOTES"
 
 # Kopiere Spark-Anwendung
-COPY spark-test.py /app/
+COPY spark-speed-layer.py /app/
 
 # MariaDB JDBC Treiber herunterladen
 ADD https://downloads.mariadb.com/Connectors/java/connector-java-3.5.1/mariadb-java-client-3.5.1.jar /opt/bitnami/spark/jars/
