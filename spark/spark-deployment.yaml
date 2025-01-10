@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: speed-layer
+  labels:
+    app: spark
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: speed-layer
+  template:
+    metadata:
+      labels:
+        app: speed-layer
+    spec:
+      containers:
+      - name: speed-layer
+        image: philippt314/speed-layer:latest
+        env:
+        - name: SPARK_HOME
+          value: "/opt/bitnami/spark"

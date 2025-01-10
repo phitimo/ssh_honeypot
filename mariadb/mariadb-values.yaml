@@ -1,0 +1,15 @@
+auth:
+  rootPassword: rootpwd
+  username: bde
+  password: bde
+  database: db
+
+primary:
+  persistence:
+    enabled: true
+    size: 1Gi
+  extraEnvVars:
+    - name: MARIADB_EXTRA_FLAGS
+      value: "--sql_mode=ANSI_QUOTES"  # Add this to set ANSI_QUOTES mode
+    - name: SQL_MODE
+      value: "ANSI_QUOTES"  # Add this to set ANSI_QUOTES mode
