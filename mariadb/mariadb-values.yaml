@@ -10,6 +10,6 @@ primary:
     size: 1Gi
   extraEnvVars:
     - name: MARIADB_EXTRA_FLAGS
-      value: "--sql_mode=ANSI_QUOTES"  # Add this to set ANSI_QUOTES mode
+      value: "--sql_mode=ANSI_QUOTES"  # Wichtig für die SQL Kompatibilität mit zwischen Spark und MariaDB. Es werden Backticks als Zitate verwendet, was nicht vom verwendedten JDBC Treiber unterstützt wird.
     - name: SQL_MODE
-      value: "ANSI_QUOTES"  # Add this to set ANSI_QUOTES mode
+      value: "ANSI_QUOTES" 
