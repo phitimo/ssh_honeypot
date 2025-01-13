@@ -1,5 +1,3 @@
-# ssh_honeypot
-
 # SSH Honeypot Analytics
 Laborarbeit im Modul Big Data Engineering
 
